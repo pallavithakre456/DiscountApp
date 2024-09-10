@@ -1,0 +1,48 @@
+# Environment Configuration
+.env
+.env.*
+
+# Dependency directory
+node_modules
+
+# System Generated Storage directory
+web/storage/
+
+# Test coverage directory
+coverage
+web/cnf.js
+
+
+# Ignore Apple macOS Desktop Services Store
+.DS_Store
+
+
+# vscode
+.vscode/
+
+# Logs
+logs
+*.log
+
+extensions/theme-app-extension/assets/app.js
+extensions/theme-app-extension/assets/app-product.js
+extensions/theme-app-extension/assets/app.css
+
+# ngrok tunnel file
+config/tunnel.pid
+
+# vite build output
+dist/
+
+# extensions build output
+
+# Node library SQLite database
+web/database.sqlite
+
+# Node library SQLite database
+web/test-report.html
+
+package-lock.json
+web/package-lock.json
+
+fly.toml

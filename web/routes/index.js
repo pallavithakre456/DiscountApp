@@ -1,0 +1,1 @@
+export { appfrontRoutes } from "./appfront.js";

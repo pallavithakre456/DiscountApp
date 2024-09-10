@@ -1,0 +1,53 @@
+{
+  "name": "shopify-app-template-node",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "debug": "node --inspect-brk index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js --ignore ./frontend",
+    "serve": "cross-env NODE_ENV=production node --max-old-space-size=8192 index.js",
+    "test": "jest --env=jsdom --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --watchAll",
+    "seed": "node helpers/data-seed.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=14.13.1"
+  },
+  "dependencies": {
+    "@shopify/shopify-api": "^5.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "axios": "^1.4.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "csv-parser": "^3.0.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "fast-csv": "^4.3.6",
+    "jest": "^29.5.0",
+    "jsdom": "^22.1.0",
+    "md5": "^2.3.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.3.1",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.13",
+    "react-beautiful-dnd": "^13.1.1",
+    "serve-static": "^1.14.1",
+    "sqlite3": "^5.1.4",
+    "supertest": "^6.3.3",
+    "xlsx-populate": "^1.21.0",
+    "xml2js": "^0.6.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "jest-environment-jsdom": "^29.5.0",
+    "jest-html-reporter": "^3.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3"
+  }
+}

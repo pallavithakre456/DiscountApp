@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Ensures that the UI is properly scaled in the Shopify Mobile app -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+    <script type="module">
+      if (!import.meta.env || !import.meta.env.PROD) {
+        // Because the base HTML is rendered in the server side, we need to manually embed the code to enable HMR in our
+        // code, so that the vite server is properly enabled to run HMR
+        const script = document.createElement('script');
+        script.setAttribute('type', "module");
+        script.setAttribute('src', "./dev_embed.js");
+        document.getElementsByTagName('head')[0].append(script);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"><!--index.jsx injects App.jsx here--></div>
+    <script type="module" src="/index.jsx"></script>
+    <script>
+      var scriptLoaded = false;
+function chatInit() {
+    if (scriptLoaded) return;
+    scriptLoaded = true;
+    var s = document.createElement("script");
+    s.src = '//code.tidio.co/q0squwybsexugfdrwpuxt4cvrtsaxkzo.js';
+    s.async = true;
+    document.head.appendChild(s);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+	chatInit()
+    }, 8e3);
+})
+window.addEventListener("mousemove", function() {
+    chatInit();
+})
+window.addEventListener("touchstart", function() {
+    chatInit();
+})
+if (window.attachEvent) {
+    window.attachEvent('onscroll', function() {
+	chatInit();
+    });
+} else {
+    window.addEventListener('scroll', function() {
+	chatInit();
+    }, false);
+}
+    </script>
+  </body>
+</html>
